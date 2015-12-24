@@ -32,7 +32,6 @@ module PdfXcassets
       files.each_with_index do |x, i|
         puts "> #{i + 1} Processing #{x}"
 
-
         i = "#{n}/#{generate_filename dir, x}"
         puts "  > Creating #{i}"
         Dir.mkdir i
@@ -76,7 +75,7 @@ module PdfXcassets
 
     def generate_filename(dir, file)
       match = dir + '/'
-      file.sub(match, '').gsub(' ', '-').gsub('/','-')
+      file.sub(match, '').gsub(' ', '-').gsub('/', '-')
         .gsub('.pdf', IMAGESET_EXTENSION)
     end
 
@@ -97,11 +96,11 @@ module PdfXcassets
       puts "> Creating #{contents_json}"
 
       j =  {
-          'info' => {
-            'version' => 1,
-            'author' => 'xcode'
-          }
+        'info' => {
+          'version' => 1,
+          'author' => 'xcode'
         }
+      }
 
       json_write name, j
     end
