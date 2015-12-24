@@ -5,8 +5,9 @@ before_script:
   - rake install
   - ls 
   - ls bin/sample
+  - cd bin
 script:
   - pdf_xcassets
   - pdf_xcassets 1 
   - pdf_xcassets 1 2
-  - pdf_xcassets resources bin/sample
+  - pdf_xcassets resources sample/
