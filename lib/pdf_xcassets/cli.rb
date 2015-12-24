@@ -75,7 +75,7 @@ module PdfXcassets
 
     def generate_filename(dir, file)
       match = dir + '/'
-      file.sub(match, '').gsub(' ', '-').gsub('/', '-')
+      file.sub(match, '').tr(' ', '-').tr('/', '-')
         .gsub('.pdf', IMAGESET_EXTENSION)
     end
 
@@ -102,7 +102,7 @@ module PdfXcassets
         }
       }
 
-      json_write name, j
+      json_write contents_json, j
     end
   end # class
 end
