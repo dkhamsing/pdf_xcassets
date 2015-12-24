@@ -3,6 +3,8 @@ rvm:
   - 2.2
 before_script:
   - rake install
+  - ls 
+  - ls bin/sample
 script:
   - pdf_xcassets
   - pdf_xcassets 1 
