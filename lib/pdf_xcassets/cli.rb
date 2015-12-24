@@ -32,7 +32,7 @@ module PdfXcassets
       files.each_with_index do |x, i|
         puts "> #{i + 1} Processing #{x}"
 
-        i = "#{n}/#{generate_filename dir, x}"
+        i = "#{n}/#{imageset dir, x}"
         puts "  > Creating #{i}"
         Dir.mkdir i
 
@@ -73,7 +73,7 @@ module PdfXcassets
       File.open(filename, 'w') { |f| f.puts(json) }
     end
 
-    def generate_filename(dir, file)
+    def imageset(dir, file)
       match = dir + '/'
       file.sub(match, '').tr(' ', '-').tr('/', '-')
         .gsub('.pdf', IMAGESET_EXTENSION)
