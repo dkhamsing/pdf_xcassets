@@ -9,8 +9,9 @@
 ```shell
 git clone https://github.com/dkhamsing/pdf_xcassets.git
 cd pdf_xcassets
-bundle install
-# done, run pdf_xcassets from bin/ 😊
+rake install
+
+# pdf_xcassets installed 😊
 ```
 
 ## Usage
