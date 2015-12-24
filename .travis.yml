@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.2
+before_script:
+  - rake install
+script:
+  - pdf_xcassets
+  - pdf_xcassets 1 
+  - pdf_xcassets 1 2
+  - pdf_xcassets resources sample
