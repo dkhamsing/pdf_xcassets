@@ -1,6 +1,7 @@
 # Command line interface
 module PdfXcassets
   require 'pdf_xcassets/version'
+
   require 'fileutils'
   require 'json'
   require 'pathname'
@@ -68,9 +69,10 @@ module PdfXcassets
       puts "> #{PROJECT_NAME} finished 🎉"
     end
 
-    def json_write(filename, content)
-      json = JSON.pretty_generate content
-      File.open(filename, 'w') { |f| f.puts(json) }
+    def get_pdf_assets(dir)
+      dir += '/' unless dir.include? '/'
+      glob = Dir.glob "#{dir}**/*"
+      glob.select { |x| x.downcase.include? 'pdf' }
     end
 
     def imageset(dir, file)
@@ -79,10 +81,9 @@ module PdfXcassets
         .gsub('.pdf', IMAGESET_EXTENSION)
     end
 
-    def get_pdf_assets(dir)
-      dir += '/' unless dir.include? '/'
-      glob = Dir.glob "#{dir}**/*"
-      glob.select { |x| x.downcase.include? 'pdf' }
+    def json_write(filename, content)
+      json = JSON.pretty_generate content
+      File.open(filename, 'w') { |f| f.puts(json) }
     end
 
     def xcassets_name(name)
