@@ -41,11 +41,6 @@ $ pdf_xcassets resources sample/
 
 ![](assets/sample-xcassets.png)
 
-## Credits
-
-- [`json`](pdf_xcassets.gemspec)
-- [giphy](http://gph.is/1eZAeAz)
-
 ## Contact
 
 - [github.com/dkhamsing](https://github.com/dkhamsing)
