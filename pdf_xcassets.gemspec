@@ -10,11 +10,12 @@ Gem::Specification.new do |spec|
   spec.email         = ["dkhamsing8@gmail.com"]
 
   spec.summary       = PdfXcassets::PROJECT_DESCRIPTION
-  spec.description   = PdfXcassets::PROJECT_DESCRIPTION
+  spec.description   = spec.summary
   spec.homepage      = PdfXcassets::PROJECT_URL
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = 'bin'
-  spec.executables   = [PdfXcassets::PROJECT_NAME]
+  spec.executables   = [spec.name]
   spec.require_paths = ['lib']
 end
