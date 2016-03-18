@@ -1,12 +1,14 @@
-asset = 'resources'
-path = 'test/fixtures'
+require 'JSON'
 
-puts "testing pdf_xcassets with name: #{asset} and path: #{path}"
-`pdf_xcassets #{asset} #{path}`
+ASSET = 'resources'
+PATH = 'test/fixtures'
 
-dir = "#{asset}.xcassets"
-name = 'Contents.json'
-path = "#{dir}/#{name}"
+# puts "testing pdf_xcassets with name: #{ASSET} and path: #{PATH}"
+# `pdf_xcassets #{ASSET} #{PATH}`
+
+xcassets = "#{ASSET}.xcassets"
+CONTENTS = 'Contents.json'
+path = "#{xcassets}/#{CONTENTS}"
 puts "Checking for #{path}"
 exit 1 unless File.exist? path
-puts 'Contents.json is created ✅'
+puts "#{CONTENTS} is created ✅"
