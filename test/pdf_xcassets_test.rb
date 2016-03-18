@@ -1,4 +1,4 @@
-require 'JSON'
+# require 'JSON'
 
 ASSET = 'resources'
 PATH = 'test/fixtures'
